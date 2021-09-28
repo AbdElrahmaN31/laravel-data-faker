@@ -17,7 +17,7 @@ This module allows you to generate fake data that can be populated into the data
 ### 3. Installation:
 
 ```sh
-composer require AN-Dev/bagisto-laravel-datafaker
+composer require abdulrahman-n/bagisto-laravel-datafaker
 ```
 
 * Run the following command below to complete the setup
