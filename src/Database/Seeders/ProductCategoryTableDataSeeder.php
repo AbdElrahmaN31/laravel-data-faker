@@ -13,6 +13,9 @@ class ProductCategoryTableDataSeeder extends Seeder
         DB::table('categories')
         ->where('categories.id' ,'<>' ,1)
         ->delete();
+        DB::table('categories_translations')
+        ->where('categories_translations.id' ,'<>' ,1)
+        ->delete();
 
         DB::table('categories')
         ->where('categories.id', 1)
@@ -39,15 +42,22 @@ class ProductCategoryTableDataSeeder extends Seeder
         DB::table('category_translations')->insert([
 
             ['id' => '2','name' => 'Fashion','slug' => 'fashion','description' => 'Fashion','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '2','locale' => 'en'],
+            ['id' => '3','name' => 'الموضة','slug' => 'fashion','description' => 'ملابس الموضة','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '2','locale' => 'ar'],
 
-            ['id' => '3','name' => 'Blankets, Quilts & Wraps','slug' => 'blankets','description' => 'Blankets, Quilts & Wraps','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '3','locale' => 'en'],
+            ['id' => '4','name' => 'Blankets, Quilts & Wraps','slug' => 'blankets','description' => 'Blankets, Quilts & Wraps','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '3','locale' => 'en'],
+            ['id' => '5','name' => 'البطانيات والأغطية','slug' => 'blankets','description' => 'البطانيات والأغطية','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '3','locale' => 'ar'],
 
-            ['id' => '4','name' => 'Shoe','slug' => 'shoe','description' => 'Shoe','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '4','locale' => 'en'],
+            ['id' => '6','name' => 'Shoe','slug' => 'shoe','description' => 'Shoe','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '4','locale' => 'en'],
+            ['id' => '7','name' => 'حذاء','slug' => 'shoe','description' => 'حذاء','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '4','locale' => 'ar'],
 
-            ['id' => '5','name' => 'Toys','slug' => 'toys','description' => 'Toys','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '5','locale' => 'en'],
+            ['id' => '8','name' => 'Toys','slug' => 'toys','description' => 'Toys','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '5','locale' => 'en'],
+            ['id' => '9','name' => 'ألعاب الأطفال','slug' => 'toys','description' => 'ألعاب الأطفال','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '5','locale' => 'ar'],
 
-            ['id' => '6','name' => 'Body & Oral Care','slug' => 'bodycare','description' => 'Body & Oral Care','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '6','locale' => 'en'],
-            ['id' => '7','name' => 'Cloths','slug' => 'cloths','description' => 'Cloths','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '7','locale' => 'en'],
+            ['id' => '10','name' => 'Body & Oral Care','slug' => 'bodycare','description' => 'Body & Oral Care','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '6','locale' => 'en'],
+            ['id' => '11','name' => 'العناية بالجسم والفم','slug' => 'bodycare','description' => 'العناية بالجسم والفم','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '6','locale' => 'ar'],
+
+            ['id' => '12','name' => 'Cloths','slug' => 'cloths','description' => 'Cloths','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '7','locale' => 'en'],
+            ['id' => '13','name' => 'الملابس','slug' => 'cloths','description' => 'الملابس','meta_title' => '','meta_description' => '','meta_keywords' => '','category_id' => '7','locale' => 'ar'],
         ]);
     }
 }

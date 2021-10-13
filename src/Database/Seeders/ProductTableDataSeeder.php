@@ -28,7 +28,7 @@ class ProductTableDataSeeder extends Seeder
 
     public function run()
     {
-        $count = 10;
+        $count = 100;
         DB::table('products')->delete();
         DB::table('product_flat')->delete();
         DB::table('product_inventories')->delete();
@@ -39,7 +39,8 @@ class ProductTableDataSeeder extends Seeder
         factory(\Webkul\Product\Models\Product::class, $count)->create()->each(function ($product) {
             $faker = \Faker\Factory::create();
 
-            $productType = $faker->randomElement(['simple', 'configurable']);
+            // $productType = $faker->randomElement(['simple', 'configurable']);
+            $productType = $faker->randomElement(['simple']);
 
             $product->update(['type' => $productType]);
 
