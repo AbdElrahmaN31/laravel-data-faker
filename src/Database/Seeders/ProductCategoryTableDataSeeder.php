@@ -13,8 +13,8 @@ class ProductCategoryTableDataSeeder extends Seeder
         DB::table('categories')
         ->where('categories.id' ,'<>' ,1)
         ->delete();
-        DB::table('categories_translations')
-        ->where('categories_translations.id' ,'<>' ,1)
+        DB::table('category_translations')
+        ->where('category_translations.id' ,'<>' ,1)
         ->delete();
 
         DB::table('categories')
