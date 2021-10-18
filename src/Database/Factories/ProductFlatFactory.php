@@ -48,12 +48,11 @@ $factory->define(\Webkul\Product\Models\ProductFlat::class, function (Faker $fak
             factory(\Webkul\Product\Models\ProductAttributeValue::class)->create($attributeValue);
         }
 
+        $category = app('Webkul\DataFaker\Repositories\ProductFlatRepository')->createProductCategories($product, $faker);
+
         $fakeImage = app('Webkul\DataFaker\Repositories\ProductFlatRepository')->uploadImages($faker, $product);
 
         factory(\Webkul\Product\Models\ProductImage::class, 5)->create($fakeImage);
-
-
-        $category = app('Webkul\DataFaker\Repositories\ProductFlatRepository')->createProductCategories($product, $faker);
 
         return $fakeData;
     }

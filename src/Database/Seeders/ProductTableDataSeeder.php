@@ -44,8 +44,11 @@ class ProductTableDataSeeder extends Seeder
 
             $product->update(['type' => $productType]);
 
+            $locales = core()->getAllLocales()->pluck('code');
+            $locale = $faker->randomElement($locales);
+
             if ($product->type == 'simple') {
-                factory(\Webkul\Product\Models\ProductFlat::class)->create(['product_id' => $product]);
+                factory(\Webkul\Product\Models\ProductFlat::class)->create(['product_id' => $product, 'locale' => $locale]);
 
                 factory(\Webkul\Product\Models\ProductInventory::class)->create(['product_id' => $product->id, 'inventory_source_id' => 1]);
             }

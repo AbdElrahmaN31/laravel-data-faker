@@ -559,8 +559,7 @@ class ProductFlatRepository extends Repository
 
         Storage::makeDirectory('/product/'. $product['product_id']);
 
-        $path = $faker->image($filepath. $product['product_id'], 800, 800, 'food', true, true);
-
+        $path = storage_path('app/public/product.PNG');
 
         $pos = strpos($path, 'product');
 
